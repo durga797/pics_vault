@@ -1,0 +1,109 @@
+.navbar-default {
+    background-color: #9e9e9e;
+    border-color: #E7E7E7;
+    font-size: 20px;
+}
+.navbar{
+	border-radius:5px;
+}
+.navbar-brand{
+	font-family: 'Satisfy',cursive;
+    font-size: 30px;
+}
+body{
+    background-color: #bcaaa4;
+}
+.container {
+  background-color: black;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+.container div {
+  background-color: white;
+  width: 100%;
+  display: inline-block;
+}
+.container img {
+  width: 100%;
+  height: 550px;
+}
+#wrap h1{
+    font-size: 48px;
+    font-style: italic;
+    color: rgb(6, 106, 117);
+    font-weight: bold;
+    text-align: center;
+}
+
+/** For the moment only webkit supports the background-clip:text; */
+#wrap h1{
+    background:
+    -webkit-repeating-linear-gradient(-45deg,
+        rgb(18, 83, 93) ,
+        rgb(18, 83, 93) 20px,
+        rgb(64, 111, 118) 20px,
+        rgb(64, 111, 118) 40px,
+        rgb(18, 83, 93) 40px);
+    padding-bottom: 30px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+#wrap h1:after{
+    content:' ';
+    display:block;
+    width:100%;
+    height:2px;
+    margin-top:10px;
+    background:
+        linear-gradient(left,
+            rgba(147,184,189,0) 0%,
+            rgba(147,184,189,0.8) 20%,
+            rgba(147,184,189,1) 53%,
+            rgba(147,184,189,0.8) 79%,
+            rgba(147,184,189,0) 100%);
+}
+#login{
+    top:100px;
+  margin: 0 auto;
+  width: 60%;
+  height: 400px;
+  background: rgb(247, 247, 247);
+    border: 1px solid rgba(147, 184, 189,0.8);
+    box-shadow:
+        0pt 2px 5px rgba(105, 108, 109,  0.7),
+        0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+    border-radius: 5px;
+  text-align: center;
+  position: relative;
+}
+#signup , #forget {
+    top:20px;
+  margin: 0 auto;
+  width: 70%;
+  height: 550px;
+  background: rgb(247, 247, 247);
+    border: 1px solid rgba(147, 184, 189,0.8);
+    box-shadow:
+        0pt 2px 5px rgba(105, 108, 109,  0.7),
+        0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+    border-radius: 5px;
+}
+#forget{
+    top:20px;
+  margin: 0 auto;
+  width: 60%;
+  height: 450px;
+  background: rgb(247, 247, 247);
+    border: 1px solid rgba(147, 184, 189,0.8);
+    box-shadow:
+        0pt 2px 5px rgba(105, 108, 109,  0.7),
+        0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+    border-radius: 5px;
+  text-align: center;
+  position: relative;
+}
+#signup input{
+    width: 250px;
+}

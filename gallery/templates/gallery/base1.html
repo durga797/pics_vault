@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Open{% endblock %}</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Satisfy">
+    <script href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script href="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'gallery/style.css' %}">
+    </head>
+<body style="background-color:#bcaaa4">
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+        <!-- Header -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'gallery:index' %}"><i>Pics Vault</i></a>
+        </div>
+
+        <!-- Items -->
+        <div class="collapse navbar-collapse" id="topNavBar">
+            <ul class="nav navbar-nav">
+                <li class="{% block albums_active %}{% endblock %}"><a href="{% url 'gallery:index' %}"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span>&nbsp; Gallery</a></li>
+            </ul>
+
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="{% url 'gallery:home' %}">
+                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp; Sign out
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+{% block body %}
+{% endblock %}
+</body>
+</html>

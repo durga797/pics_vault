@@ -1,0 +1,16 @@
+{% extends 'gallery/base1.html' %}
+{% block title %}{{ album.album_title }}{% endblock %}
+{% block body %}
+    <div class="container">
+    {% load staticfiles %}
+        <div class="w3-content w3-display-container" style="text-align: center;top: 50px; width:99%">
+             {% if album %}
+                  {% for photos in album.photos_set.all %}
+                        <img class="mySlides" src="{{ photos.photo.url }}"style="width:100%">
+                  {% endfor %}
+              {% endif %}
+        </div>
+
+        <script type="text/javascript" src="{% static 'gallery/sliding.js' %}"></script>
+            </div>
+{% endblock %}

@@ -1,0 +1,10 @@
+<link rel="stylesheet" type="text/css" href="http://www.w3schools.com/lib/w3.css">
+{% extends 'gallery/base1.html' %}
+{% block title %}{{ photo.photo_title }}{% endblock %}
+{% block body %}
+    {% load staticfiles %}
+
+     <div class="w3-content w3-display-container" style="text-align: center;top: 45px;">
+             <img class="mySlides" src="{{ photo.photo.url }}" style="width:900px;height:600px;">
+     </div>
+{% endblock %}

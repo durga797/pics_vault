@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Open{% endblock %}</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Satisfy">
+    <script href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script href="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'gallery/style.css' %}">
+    </head>
+<body style="background-color:#bcaaa4">
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+        <!-- Header -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target = "#topNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <!---Items-->
+        <div class="collapse navbar-collapse" id = 'topNavBar'>
+            <ul class="nav navbar-nav navbar-left">
+                <li class="">
+                    <a href="{% url 'gallery:login' %}" >
+                        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;Sign in
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-collapse">
+                <li class="" id="hello" style="padding-left: 430px;color: white">
+                    <a href="{% url 'gallery:home' %}" class="navbar-brand">
+                        <span class="glyphicon glyphicon-sign-up" aria-hidden="true"></span>&nbsp;<i>Pics Vault</i>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right" >
+                <li class="">
+                    <a href="{% url 'gallery:signup' %}">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;Sign Up
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% block body %}
+{% endblock %}
+</body>
+</html>
